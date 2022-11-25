@@ -6,12 +6,11 @@ const AddPlayerForm =()=>{
  
     const handleSubmit  = (e) => {
         e.preventDefault();
-        props.addPlayer(value);
+        this.props.addPlayer(value);
     }
 return(
 
     <form onSubmit={(e) => handleSubmit(e)}>
-    { console.log(value) }
        <input 
             type='text'
             value={value}
