@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 
 
-const AddPlayerForm =()=>{
+const AddPlayerForm = (props) =>{
     const [value, setValue] = useState("");
  
     const handleSubmit  = (e) => {
         e.preventDefault();
-        this.props.addPlayer(value);
+        props.addPlayer(value);
     }
+
 return(
 
     <form onSubmit={(e) => handleSubmit(e)}>
@@ -21,7 +22,6 @@ return(
        <input 
             type='submit'
             value="add player"
-            ref={input=>this.props.newItem = input}
         />
 
 

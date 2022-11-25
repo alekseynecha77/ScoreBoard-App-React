@@ -76,7 +76,7 @@ const App = () => {
           changeScore={handleScoreChange}
         />
       )}
-      <AddPlayerForm addPlayer={handleAddPlayer}/>
+      <AddPlayerForm addPlayer={handleAddPlayer} />
     </div>
   );
       }
