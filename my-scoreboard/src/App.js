@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 import App from './component/App';
+
 // function App() {
 //   return (
 //     <div className="App">
