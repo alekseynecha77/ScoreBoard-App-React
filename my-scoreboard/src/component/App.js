@@ -61,7 +61,6 @@ const nextPlayerId = useRef(5);
   return (
     <div className="scoreboard">
       <Header
-        title="Scoreboard"
         players={players}
       />
 
