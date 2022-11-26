@@ -5,9 +5,19 @@ const Stopwatch = ()=>{
     const [elapsedTime, setElapsedTime] = useState(0);
 
     useEffect(()=>{
+        console.log('Running side effect');
+        let id;
         if(isRunning){
-            setInterval(() => setElapsedTime(prevTime => prevTime + 1), 1000);
+            id = setInterval(() => {
+                setElapsedTime(prevTime => prevTime + 1)
+                console.log('tick');
+
+            },1000)
         }
+        return () => {
+            clearInterval(id)
+            console.log('clean')
+        };
     },[isRunning]);
 
     return(
