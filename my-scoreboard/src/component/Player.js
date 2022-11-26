@@ -1,19 +1,19 @@
 import React, {memo} from "react";
 import Counter from "./Counter";
 
-const Player = (props) => {
+const Player = ({name, score, id, removePlayer, changeScore}) => {
     return (
       <div className="player">
-      {console.log(props.name + 'render')}
+      {console.log(name + 'render')}
         <span className="player-name">
-          <button className="remove-player" onClick={() => props.removePlayer(props.id)}>✖</button>
-          {props.name}
+          <button className="remove-player" onClick={() => removePlayer(id)}>✖</button>
+          {name}
         </span>
   
         <Counter 
-        score={props.score}
-        id={props.id}
-        changeScore={props.changeScore}
+        score={score}
+        id={id}
+        changeScore={changeScore}
 
          />
       </div>
